@@ -1,13 +1,12 @@
-'use strict'
-const http = require('http')
-const https = require('https')
-const { URL } = require('url')
-const isStream = require('is-stream')
-const caseless = require('caseless')
-const bytes = require('bytesish')
-const bent = require('./core')
-const zlib = require('zlib')
-const { PassThrough } = require('stream')
+import http from 'http'
+import https from 'https'
+import { URL } from 'url'
+import isStream from 'is-stream'
+import caseless from 'caseless'
+import bytes from 'bytesish'
+import bent from './core.js'
+import zlib from 'zlib'
+import { PassThrough } from 'stream'
 
 const compression = {}
 
@@ -175,4 +174,4 @@ const mkrequest = (statusCodes, method, encoding, headers, baseurl) => (_url, bo
   })
 }
 
-module.exports = bent(mkrequest)
+export default bent(mkrequest)

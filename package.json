@@ -1,7 +1,8 @@
 {
-  "name": "bent",
-  "version": "0.0.0-dev",
+  "name": "bent-esm",
+  "version": "1.0.0",
   "description": "Functional HTTP client for Node.js w/ async/await.",
+  "type": "module",
   "main": "src/nodejs.js",
   "browser": "src/browser.js",
   "scripts": {

@@ -1,6 +1,5 @@
-'use strict'
 /* global fetch, btoa, Headers */
-const core = require('./core')
+import core from './core.js'
 
 class StatusError extends Error {
   constructor (res, ...params) {
@@ -73,4 +72,4 @@ const mkrequest = (statusCodes, method, encoding, headers, baseurl) => async (_u
   else return resp
 }
 
-module.exports = core(mkrequest)
+export default core(mkrequest)
